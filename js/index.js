@@ -1,18 +1,25 @@
-const rates = document.querySelectorAll("li");
-const containerRate = document.querySelector("form");
-const containerSucces = document.getElementById("success");
-const numSpan = document.getElementById("num");
+const buttonRate = document.querySelectorAll(".btn-rate");
+const buttonSubmit = document.querySelector(".button");
 
-for (let i = 0; i < rates.length; i++) {
-  const rateSelect = rates[i];
+const containerRate = document.querySelector(".container");
+const containerSuccess = document.querySelector("#success");
 
-  rateSelect.addEventListener("click", () => {
-    numSpan.textContent = rateSelect.textContent;
+const spanNum = document.querySelector("#num");
+
+var ehValido = false;
+
+for (let i = 0; i < buttonRate.length; i++) {
+  const buttonRateSelect = buttonRate[i];
+  buttonRateSelect.addEventListener("click", () => {
+    ehValido = true;
+    spanNum.textContent = buttonRateSelect.textContent;
   });
 }
 
-containerRate.addEventListener("submit", (event) => {
-  event.preventDefault();
-  containerRate.classList.add("hidden");
-  containerSucces.classList.remove("hidden");
+buttonSubmit.addEventListener("click", () => {
+  if (!ehValido) {
+  } else {
+    containerRate.classList.add("hidden");
+    containerSuccess.classList.remove("hidden");
+  }
 });

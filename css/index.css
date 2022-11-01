@@ -1,15 +1,19 @@
 body {
   font-family: 'Overpass', sans-serif;
   background-color: hsl(216, 12%, 8%);
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
-legend {
+.title-div {
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -58,29 +62,6 @@ legend {
   line-height: 25px;
 }
 
-ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn-rate {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border-style: none;
-  background-color: hsl(216, 12%, 8%);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn-rate:hover {
-  background-color: hsl(25, 97%, 53%);
-}
-
-.btn-rate:focus {
-  background-color: hsl(217, 12%, 63%);
-}
 
 .button {
   width: 100%;
@@ -102,7 +83,33 @@ ul {
   color: hsl(25, 97%, 53%);
 }
 
-.rate-field {
+.button-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-rate {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: hsl(216, 12%, 8%);
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+  font-family: 'Overpass', sans-serif;
+}
+
+.btn-rate:hover {
+  background-color: hsl(25, 97%, 53%);
+}
+
+.btn-rate:focus {
+  background-color: hsl(217, 12%, 63%);
+}
+
+.rate-div {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -111,5 +118,3 @@ ul {
 .hidden {
   display: none;
 }
-
-@media (min-width: 1440px) {}

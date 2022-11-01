@@ -33,28 +33,29 @@
 
   <main>
     <!-- Rating state start -->
-    <form class="container">
-      <legend>
-        <img class="star" src="./images/icon-star.svg" alt="">
-        <p class="title">How did we do?</p>
-      </legend>
+    <div class="container">
+      <div class="title-div">
+        <img class="star" src="./images/icon-star.svg" alt="A star">
+        <h2 class="title">How did we do?</h2>
+      </div>
 
       <p class="desc">Please let us know how we did with your support request. All feedback is appreciated
         to help us improve our offering!</p>
 
+      <div class="rate-div">
+        <div>
+          <ul class="button-list">
+            <li class="btn-item"><button class="btn-rate">1</button></li>
+            <li class="btn-item"><button class="btn-rate">2</button></li>
+            <li class="btn-item"><button class="btn-rate">3</button></li>
+            <li class="btn-item"><button class="btn-rate">4</button></li>
+            <li class="btn-item"><button class="btn-rate">5</button></li>
+          </ul>
+        </div>
+        <button class="button" type="button">Submit</button>
+      </div>
 
-      <fieldset class="rate-field">
-        <ul class="rate">
-          <li><button type="button" class="btn-rate">1</button></li>
-          <li><button type="button" class="btn-rate">2</button></li>
-          <li><button type="button" class="btn-rate">3</button></li>
-          <li><button type="button" class="btn-rate">4</button></li>
-          <li><button type="button" class="btn-rate">5</button></li>
-        </ul>
-
-        <button class="button" type="submit">Submit</button>
-      </fieldset>
-    </form>
+    </div>
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
